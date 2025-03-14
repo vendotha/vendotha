@@ -11,7 +11,6 @@ Welcome to my GitHub profile! I'm a passionate developer who loves building inno
 ## 🚀 About Me
 
 - **Name**: Buvananand Vendotha
-- **Pronouns**: He/Him
 - **Interests**: AI, Machine Learning, Web Development, and Open Source
 - **Fun Fact**: I enjoy turning ideas into reality through code!
 
@@ -40,8 +39,8 @@ Welcome to my GitHub profile! I'm a passionate developer who loves building inno
 
 Here are some of my popular repositories:
 
-### 1. [Gestura](https://github.com/vendotha/Gestura)
-A **hands-free mouse controller** prototype that uses hand gestures to control your computer. Built with Python and OpenCV.
+### 1. [Mealzo](https://github.com/vendotha/Mealzo)
+A **Food-Delivery Web Application** built using Python.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
