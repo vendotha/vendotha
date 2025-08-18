@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=120&section=header&text=Buvananand%20Vendotha&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=AI%20Developer%20%7C%20Full%20Stack%20Engineer%20%7C%20Innovation%20Enthusiast&descAlignY=51&descAlign=50"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=120&section=header&text=Buvananand%20Vendotha&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=AI%20Developer%20%7C%20Full%20Stack%20Engineer%20%7C%20Innovation%20Enthusiast&descAlignY=60&descAlign=50"/>
 </div>
 
 <div align="center">
@@ -20,7 +20,7 @@
 
 <img align="right" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="400" height="300"/>
 
-```python
+⁠ python
 class BuvananandVendotha:
     def __init__(self):
         self.name = "Buvananand Vendotha"
@@ -43,7 +43,7 @@ class BuvananandVendotha:
             "frontend": ["JavaScript", "HTML5", "CSS3"],
             "specialties": ["Chatbot Development", "IoT Solutions"]
         }
-```
+ ⁠
 
 ---
 
@@ -90,52 +90,52 @@ class BuvananandVendotha:
 <tr>
 <td width="50%">
 
-### 🍽️ [Mealzo - Food Delivery Platform](https://github.com/vendotha/Mealzo)
-*Full-stack food delivery application with modern UI/UX*
-
-**Tech Stack:** Python, Flask, HTML/CSS, JavaScript
-- 🎨 Responsive design with intuitive user interface
-- 🔐 Secure user authentication and payment integration
-- 📱 Mobile-friendly responsive layout
-- ⚡ Real-time order tracking system
+### 🧠 [DeepDetect - AI-Powered Deepfake Detector](https://github.com/vendotha/DeepDetect)
+End-to-end Deepfake Detection system with deep learning integration
+Tech Stack: Python, TensorFlow, Flask, HTML/CSS, JavaScript
+•⁠ ⁠🧬 Deep learning model for accurate image recognition
+•⁠ ⁠🔐 Secure API endpoints and model deployment
+•⁠ ⁠🎨 Clean, responsive front-end for easy image uploads
+•⁠ ⁠⚡ Real-time prediction with interactive UI feedback
 
 </td>
 <td width="50%">
 
 ### 🤖 [Medibot - AI Medical Assistant](https://github.com/vendotha/Medibot)
-*Intelligent medical diagnosis chatbot using AI*
+Intelligent medical diagnosis chatbot using AI
 
-**Tech Stack:** Python, Streamlit, YOLO, Gemini API
-- 🩺 AI-powered medical consultation
-- 👁️ Computer vision for symptom analysis
-- 💬 Natural language processing for patient interaction
-- 📊 Real-time health data visualization
+*Tech Stack:* Python, Streamlit, YOLO, Gemini API
+•⁠  ⁠🩺 AI-powered medical consultation
+•⁠  ⁠👁️ Computer vision for symptom analysis
+•⁠  ⁠💬 Natural language processing for patient interaction
+•⁠  ⁠📊 Real-time health data visualization
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 👤 [Facial Attendance System](https://github.com/vendotha/facial-attendance-system)
-*Smart attendance tracking with facial recognition*
+### 🍽️ [Mealzo - Food Delivery Platform](https://github.com/vendotha/Mealzo) 
+Full-stack food delivery application with modern UI/UX 
+*Tech Stack:* Python, Flask, HTML/CSS, JavaScript 
+•⁠ ⁠🎨 Responsive design with intuitive user interface 
+•⁠ ⁠🔐 Secure user authentication and payment integration 
+•⁠ ⁠📱 Mobile-friendly responsive layout 
+•⁠ ⁠⚡ Real-time order tracking system
 
-**Tech Stack:** Python, OpenCV, Machine Learning
-- 🎯 Real-time face detection and recognition
-- 📊 Automated attendance logging
-- 🔒 Secure biometric authentication
-- 📈 Analytics dashboard for attendance patterns
+
 
 </td>
 <td width="50%">
 
 ### 💭 [Sentiment Analysis Chatbot](https://github.com/vendotha/sentimental-chatbot)
-*Advanced NLP chatbot with emotion detection*
+Advanced NLP chatbot with emotion detection
 
-**Tech Stack:** Python, NLP, AI/ML
-- 🧠 Real-time sentiment analysis
-- 💬 Context-aware conversations
-- 📊 Emotion tracking and visualization
-- 🎭 Adaptive response based on user mood
+*Tech Stack:* Python, NLP, AI/ML
+•⁠  ⁠🧠 Real-time sentiment analysis
+•⁠  ⁠💬 Context-aware conversations
+•⁠  ⁠📊 Emotion tracking and visualization
+•⁠  ⁠🎭 Adaptive response based on user mood
 
 </td>
 </tr>
@@ -182,7 +182,7 @@ class BuvananandVendotha:
 
 <div align="center">
 
-| 🚀 **Launch Goals** | 📚 **Learning Goals** | 🤝 **Community Goals** |
+| 🚀 *Launch Goals* | 📚 *Learning Goals* | 🤝 *Community Goals* |
 |:---:|:---:|:---:|
 | 3 Major AI Projects | Advanced ML Techniques | 10+ Open Source Contributions |
 | Production-Ready Apps | Cloud Architecture | Technical Blog Writing |
@@ -194,30 +194,28 @@ class BuvananandVendotha:
 
 ## 💡 What Drives Me
 
-
 <table align="center">
 <tr>
 <td align="center" width="33%">
   
-**🎨 Design Philosophy**
-> Creating elegant solutions that make complex AI accessible to everyone
+*🎨 Design Philosophy*
+	⁠Creating elegant solutions that make complex AI accessible to everyone
 
 </td>
 <td align="center" width="33%">
 
-**🔬 Innovation Mindset**
-> Always experimenting with cutting-edge technologies to push boundaries
+*🔬 Innovation Mindset*
+	⁠Always experimenting with cutting-edge technologies to push boundaries
 
 </td>
 <td align="center" width="33%">
 
-**🌍 Impact Vision**
-> Using technology as a force for positive change in the world
+*🌍 Impact Vision*
+	⁠Using technology as a force for positive change in the world
 
 </td>
 </tr>
 </table>
-
 
 
 ## 🌐 Let's Connect & Collaborate
@@ -230,11 +228,11 @@ class BuvananandVendotha:
 
 <br/>
 
-**🤝 Open to:**
-- Collaboration on AI/ML projects
-- Innovative web application development
-- Open source contributions
-- Technical discussions and knowledge sharing
+*🤝 Open to:*
+•⁠  ⁠Collaboration on AI/ML projects
+•⁠  ⁠Innovative web application development
+•⁠  ⁠Open source contributions
+•⁠  ⁠Technical discussions and knowledge sharing
 
 </div>
 
