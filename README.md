@@ -1,179 +1,248 @@
-<h1 align="center">Hi 👋, I'm Buvananand Vendotha</h1>
-<h3 align="center">A passionate developer building innovative AI solutions and real-world applications</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=vendotha&label=Profile%20views&color=0e75b6&style=flat" alt="vendotha" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vendotha" alt="vendotha" /></a> </p>
-
-- 🔭 I'm currently working on **AI-powered applications and innovative web solutions**
-- 🌱 I'm currently learning **advanced machine learning techniques and cloud technologies**
-- 👯 I'm looking to collaborate on **open-source AI projects and innovative web applications**
-- 🤝 I'm looking for help with **scaling ML models and cloud deployment strategies**
-- 💬 Ask me about **Python, AI/ML, web development, computer vision, and chatbot development**
-- 📫 How to reach me **vendotha@gmail.com**
-- ⚡ Fun fact **I enjoy turning complex ideas into simple, elegant solutions through code!**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/vendotha" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vendotha" height="30" width="40" /></a>
-<a href="https://github.com/vendotha" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="vendotha" height="30" width="40" /></a>
-</p>
-
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-<a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a>
-<a href="https://streamlit.io/" target="_blank" rel="noreferrer"> <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="streamlit" width="40" height="40"/> </a>
-<a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a>
-<a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a>
-<a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a>
-<a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a>
-<a href="https://numpy.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/numpy-1.svg" alt="numpy" width="40" height="40"/> </a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
-<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-<a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/palletsprojects_flask/palletsprojects_flask-icon.svg" alt="flask" width="40" height="40"/> </a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>
-<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
-<a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
-</p>
-
-<h3 align="left">🌟 Top 5 Recent Projects:</h3>
-
 <div align="center">
-
-### 1. [🍽️ Mealzo - Food Delivery Platform](https://github.com/vendotha/Mealzo)
-**A comprehensive food delivery web application with modern UI/UX**
-<br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
-
----
-
-### 2. [🏥 Medibot - AI Medical Assistant](https://github.com/vendotha/Medibot)
-**Intelligent medical diagnosis chatbot using YOLO and Gemini API**
-<br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![AI](https://img.shields.io/badge/AI-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-
----
-
-### 3. [👤 Facial Attendance System](https://github.com/vendotha/facial-attendance-system)
-**Smart attendance tracking using facial recognition technology**
-<br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![ML](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=flat-square&logo=scikit-learn&logoColor=white)
-
----
-
-### 4. [💭 Sentiment Analysis Chatbot](https://github.com/vendotha/sentimental-chatbot)
-**Advanced NLP chatbot with real-time sentiment analysis**
-<br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-4CAF50?style=flat-square&logo=spacy&logoColor=white)
-![AI](https://img.shields.io/badge/AI-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-
----
-
-### 5. [🔐 IoT Face Recognition Door Lock](https://github.com/vendotha/iot-face-recognition-door-lock)
-**Smart home security system with ESP32-CAM and facial recognition**
-<br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![IoT](https://img.shields.io/badge/IoT-00979D?style=flat-square&logo=arduino&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-000000?style=flat-square&logo=espressif&logoColor=white)
-
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=120&section=header&text=Buvananand%20Vendotha&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=AI%20Developer%20%7C%20Full%20Stack%20Engineer%20%7C%20Innovation%20Enthusiast&descAlignY=51&descAlign=50"/>
 </div>
 
-<h3 align="left">📊 GitHub Analytics:</h3>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=Welcome+to+my+Digital+Universe+%F0%9F%9A%80;AI+%26+ML+Enthusiast+%F0%9F%A4%96;Building+Tomorrow's+Solutions+Today+%F0%9F%8C%9F;Let's+Code+Something+Amazing!+%F0%9F%92%BB" alt="Typing SVG" />
+</div>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=vendotha&show_icons=true&locale=en&layout=compact&theme=radical" alt="vendotha" /></p>
+<br/>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=vendotha&show_icons=true&locale=en&theme=radical" alt="vendotha" /></p>
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=vendotha&label=Profile%20Views&color=667eea&style=for-the-badge" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/vendotha?label=Followers&style=for-the-badge&color=764ba2" alt="GitHub Followers" />
+  <img src="https://img.shields.io/badge/Focus-AI%20%26%20Innovation-brightgreen?style=for-the-badge" alt="Focus" />
+</div>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vendotha&theme=radical" alt="vendotha" /></p>
+---
 
-<h3 align="left">🏆 GitHub Achievements:</h3>
+## 🚀 About Me
 
-<p align="left">
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vendotha&theme=radical" alt="vendotha's GitHub Contribution"/>
-</p>
-
-<h3 align="left">⚡ Current Focus Areas:</h3>
+<img align="right" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="400" height="300"/>
 
 ```python
 class BuvananandVendotha:
     def __init__(self):
         self.name = "Buvananand Vendotha"
-        self.role = "Full Stack Developer & AI Enthusiast"
-        self.location = "India"
+        self.role = "AI Developer & Full Stack Engineer"
+        self.location = "Hyderabad, India 🇮🇳"
+        self.passion = "Transforming ideas into intelligent solutions"
         
-    def current_work(self):
+    def current_mission(self):
         return [
-            "Building AI-powered applications",
-            "Exploring computer vision solutions",
-            "Developing web applications with modern frameworks",
-            "Contributing to open-source projects"
+            "🔭 Building next-gen AI applications",
+            "🌱 Mastering advanced ML & cloud technologies",
+            "🤝 Collaborating on innovative open-source projects",
+            "💡 Solving real-world problems with elegant code"
         ]
     
-    def tech_stack(self):
+    def expertise(self):
         return {
-            "languages": ["Python", "JavaScript", "HTML/CSS"],
-            "frameworks": ["Flask", "Streamlit", "OpenCV"],
-            "ai_ml": ["TensorFlow", "PyTorch", "Scikit-learn", "YOLO"],
-            "databases": ["MySQL", "SQLite"],
-            "tools": ["Git", "Docker", "VS Code"]
+            "ai_ml": ["Computer Vision", "NLP", "Deep Learning"],
+            "backend": ["Python", "Flask", "API Development"],
+            "frontend": ["JavaScript", "HTML5", "CSS3"],
+            "specialties": ["Chatbot Development", "IoT Solutions"]
         }
-    
-    def fun_fact(self):
-        return "I love turning complex problems into elegant solutions! 🚀"
 ```
-
-<h3 align="left">🎯 Goals for 2025:</h3>
-
-- 🚀 Launch 3 major AI projects
-- 📚 Master advanced machine learning techniques
-- 🌍 Contribute to 10+ open-source projects
-- 🎓 Share knowledge through technical blogs
-- 🤝 Build meaningful connections in the tech community
-
-<h3 align="left">💡 Fun Facts:</h3>
-
-- 🎨 I enjoy creating user-friendly interfaces that make complex AI accessible
-- 🔬 Always experimenting with the latest AI/ML frameworks and techniques
-- 🌱 Passionate about using technology to solve real-world problems
-- 📖 Continuous learner who loves staying updated with tech trends
-
-<h3 align="left">📫 Let's Connect & Collaborate:</h3>
-
-<p align="center">
-<a href="https://linkedin.com/in/vendotha">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-<a href="mailto:vendotha@gmail.com">
-<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-</a>
-<a href="https://github.com/vendotha">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-</a>
-</p>
 
 ---
 
+## 🛠️ Tech Arsenal
+
 <div align="center">
-  <h4>⭐ If you find my work interesting, don't forget to star my repositories! ⭐</h4>
-  <p><em>Always open to discussing new ideas and collaboration opportunities!</em></p>
-  
-  **"Code is like humor. When you have to explain it, it's bad." - Cory House**
+
+### 🧠 AI & Machine Learning
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+</p>
+
+### 🌐 Web Development
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+</p>
+
+### 🗄️ Data & Tools
+<p>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+</p>
+
 </div>
 
 ---
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
-</p>
+## 🏆 Featured Projects
+
+<div align="center">
+
+<table>
+<tr>
+<td width="50%">
+
+### 🍽️ [Mealzo - Food Delivery Platform](https://github.com/vendotha/Mealzo)
+*Full-stack food delivery application with modern UI/UX*
+
+**Tech Stack:** Python, Flask, HTML/CSS, JavaScript
+- 🎨 Responsive design with intuitive user interface
+- 🔐 Secure user authentication and payment integration
+- 📱 Mobile-friendly responsive layout
+- ⚡ Real-time order tracking system
+
+</td>
+<td width="50%">
+
+### 🤖 [Medibot - AI Medical Assistant](https://github.com/vendotha/Medibot)
+*Intelligent medical diagnosis chatbot using AI*
+
+**Tech Stack:** Python, Streamlit, YOLO, Gemini API
+- 🩺 AI-powered medical consultation
+- 👁️ Computer vision for symptom analysis
+- 💬 Natural language processing for patient interaction
+- 📊 Real-time health data visualization
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 👤 [Facial Attendance System](https://github.com/vendotha/facial-attendance-system)
+*Smart attendance tracking with facial recognition*
+
+**Tech Stack:** Python, OpenCV, Machine Learning
+- 🎯 Real-time face detection and recognition
+- 📊 Automated attendance logging
+- 🔒 Secure biometric authentication
+- 📈 Analytics dashboard for attendance patterns
+
+</td>
+<td width="50%">
+
+### 💭 [Sentiment Analysis Chatbot](https://github.com/vendotha/sentimental-chatbot)
+*Advanced NLP chatbot with emotion detection*
+
+**Tech Stack:** Python, NLP, AI/ML
+- 🧠 Real-time sentiment analysis
+- 💬 Context-aware conversations
+- 📊 Emotion tracking and visualization
+- 🎭 Adaptive response based on user mood
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=vendotha&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=vendotha&theme=tokyonight&hide_border=true" />
+</div>
+
+<div align="center">
+  <img width="60%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vendotha&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vendotha&theme=tokyonight" />
+</div>
+
+---
+
+## 🏅 Achievements & Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=vendotha&theme=tokyonight&no-frame=true&row=1&column=7" />
+</div>
+
+---
+
+## 🔥 Recent Activity
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vendotha&bg_color=1a1b27&color=628fdb&line=628fdb&point=ffffff&area=true&hide_border=true" />
+</div>
+
+---
+
+## 🎯 2025 Vision Board
+
+<div align="center">
+
+| 🚀 **Launch Goals** | 📚 **Learning Goals** | 🤝 **Community Goals** |
+|:---:|:---:|:---:|
+| 3 Major AI Projects | Advanced ML Techniques | 10+ Open Source Contributions |
+| Production-Ready Apps | Cloud Architecture | Technical Blog Writing |
+| IoT Innovations | MLOps & Deployment | Tech Community Building |
+
+</div>
+
+---
+
+## 💡 What Drives Me
+
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+  
+**🎨 Design Philosophy**
+> Creating elegant solutions that make complex AI accessible to everyone
+
+</td>
+<td align="center" width="33%">
+
+**🔬 Innovation Mindset**
+> Always experimenting with cutting-edge technologies to push boundaries
+
+</td>
+<td align="center" width="33%">
+
+**🌍 Impact Vision**
+> Using technology as a force for positive change in the world
+
+</td>
+</tr>
+</table>
+
+
+
+## 🌐 Let's Connect & Collaborate
+
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vendotha)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vendotha@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vendotha)
+
+<br/>
+
+**🤝 Open to:**
+- Collaboration on AI/ML projects
+- Innovative web application development
+- Open source contributions
+- Technical discussions and knowledge sharing
+
+</div>
+
+---
+
+<div align="center">
+  <h3>⭐ If you find my work interesting, don't forget to star my repositories! ⭐</h3>
+  <p><em>"Always open to discussing new ideas and collaboration opportunities!"</em></p>
+  
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=80&section=footer"/>
+</div>
