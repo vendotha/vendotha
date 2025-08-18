@@ -20,8 +20,7 @@
 
 <img align="right" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" width="400" height="300"/>
 
-⁠ python
-class BuvananandVendotha:
+
     
 	def __init__(self):
         self.name = "Buvananand Vendotha"
