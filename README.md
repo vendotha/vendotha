@@ -22,7 +22,8 @@
 
 ⁠ python
 class BuvananandVendotha:
-    def __init__(self):
+    
+	def __init__(self):
         self.name = "Buvananand Vendotha"
         self.role = "AI Developer & Full Stack Engineer"
         self.location = "Hyderabad, India 🇮🇳"
