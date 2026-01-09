@@ -200,6 +200,23 @@ Deployment: Docker, Production-Ready
 
 ---
 
+## 📊 GitHub Analytics
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vendotha&theme=tokyonight" />
+      </td>
+      <td>
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=vendotha&theme=tokyonight&hide_border=true" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
 ## 💡 Current Focus
 
 > 🔭 Building production-ready AI systems with scalable backend architectures  
