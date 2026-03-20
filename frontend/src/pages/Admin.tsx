@@ -33,7 +33,7 @@ const LoginScreen = () => {
           <p>VITE_FIREBASE_API_KEY=AIzaSy...</p>
           <p>VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com</p>
           <p>VITE_FIREBASE_PROJECT_ID=your-project-id</p>
-          <p>VITE_API_URL=http://localhost:8000</p>
+          <p>VITE_API_URL=https://vendotha-api.onrender.com</p>
         </div>
         <p className="text-xs text-muted-foreground text-center font-sans">See <strong>SETUP.md</strong> for full instructions.</p>
       </div>

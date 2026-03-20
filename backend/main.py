@@ -25,6 +25,7 @@ _origins = [
     "http://localhost:4173",
     "http://127.0.0.1:5173",
     "http://localhost:8080",
+    "vendotha.web.app",
 ]
 _frontend_url = os.getenv("FRONTEND_URL", "").strip()
 if _frontend_url:
