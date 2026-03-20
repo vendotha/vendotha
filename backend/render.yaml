@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: buvananand-portfolio-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: ADMIN_EMAIL
+        value: vendotha@gmail.com
+      - key: FRONTEND_URL
+        sync: false
+    plan: free

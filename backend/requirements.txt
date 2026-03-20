@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+asyncpg
+python-multipart
+httpx
+pyjwt
+cryptography
+python-dotenv

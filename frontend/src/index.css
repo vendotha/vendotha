@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 5% 96%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 211 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 211 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio custom tokens */
+    --glass-bg: 0 0% 100% / 0.65;
+    --glass-border: 0 0% 100% / 0.5;
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    --gradient-text: linear-gradient(135deg, hsl(211, 100%, 45%), hsl(260, 80%, 55%), hsl(170, 70%, 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(211, 100%, 45%), hsl(230, 90%, 60%));
+    --glow-blue: 0 0 60px hsla(211, 100%, 50%, 0.15);
+    --glow-ring: conic-gradient(from 0deg, hsl(211, 100%, 50%), hsl(260, 80%, 55%), hsl(170, 70%, 45%), hsl(211, 100%, 50%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+
+  }
+
+  a, button {
+
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Custom cursor only on the public portfolio, not /admin */
+  body.custom-cursor,
+  body.custom-cursor a,
+  body.custom-cursor button {
+    cursor: none;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: hsla(var(--glass-bg));
+    border: 1px solid hsla(var(--glass-border));
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), var(--glow-blue);
+  }
+
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-pill {
+    @apply glass-card px-4 py-2 rounded-full text-sm font-medium;
+  }
+
+  .glass-input {
+    @apply glass-card px-4 py-3 rounded-lg outline-none transition-all duration-200;
+  }
+
+  .glass-input:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 3px hsla(var(--primary) / 0.1);
+  }
+
+  .section-fade {
+    @apply opacity-0 translate-y-8;
+  }
+
+  .animated-gradient-line {
+    background: var(--gradient-accent);
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .group:hover .animated-gradient-line {
+    transform: scaleX(1);
+  }
+}
+
+/* Animated mesh background orbs */
+@keyframes float-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(100px, -50px) scale(1.1); }
+  50% { transform: translate(50px, 100px) scale(0.9); }
+  75% { transform: translate(-80px, 60px) scale(1.05); }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-120px, 80px) scale(1.15); }
+  50% { transform: translate(-60px, -100px) scale(0.85); }
+  75% { transform: translate(90px, -40px) scale(1.1); }
+}
+
+@keyframes float-orb-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(60px, 120px) scale(0.9); }
+  50% { transform: translate(-100px, 40px) scale(1.1); }
+  75% { transform: translate(40px, -80px) scale(0.95); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.orb-1 { animation: float-orb-1 20s ease-in-out infinite; }
+.orb-2 { animation: float-orb-2 25s ease-in-out infinite; }
+.orb-3 { animation: float-orb-3 22s ease-in-out infinite; }
+.spin-slow { animation: spin-slow 8s linear infinite; }
+
