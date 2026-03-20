@@ -1,6 +1,6 @@
 // All API calls go through here — change API_BASE to your Render URL after deploy
 
-export const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+export const API_BASE = import.meta.env.VITE_API_URL || "https://vendotha-api.onrender.com";
 
 async function apiFetch(path: string, options: RequestInit = {}) {
   const res = await fetch(`${API_BASE}${path}`, options);
