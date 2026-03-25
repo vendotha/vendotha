@@ -57,19 +57,7 @@ class AIEngineer:
 
 <div align="center">
 
-### 🎯 [Kalapatha](https://github.com/vendotha/Kalapatha)
-**Advanced AI system with cutting-edge capabilities**
 
-```yaml
-Technology: Python
-Focus: AI/ML Production System
-Architecture: Scalable & Modular
-Status: Recently Updated (2 weeks ago)
-```
-
-**Key Features:** Production-grade AI implementation • Advanced algorithms • Optimized performance • Modern architecture
-
----
 
 ### 🤖 [Medibot - AI Medical Assistant](https://github.com/vendotha/Medibot)
 **Multi-modal AI diagnostic system with computer vision**
