@@ -14,7 +14,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.5,delay:0.1}}>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-sans">
-              I'm a backend-focused developer from Hyderabad who loves building intelligent systems. My work sits at the intersection of <strong className="text-foreground">Python backend engineering</strong> and <strong className="text-foreground">AI/ML</strong> — from designing REST APIs with Django and FastAPI to training computer vision models.
+              I'm a backend-focused developer from Hyderabad who loves building intelligent systems. My work sits at the intersection of <strong className="text-foreground">Backend engineering</strong> and <strong className="text-foreground">AI/ML</strong> — from designing REST APIs with Django, Springboot and FastAPI to training computer vision models.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6 font-sans">
               Currently pursuing B.E. CSE at MVSR Engineering College (GPA: {profile.gpa}). I build things that matter — chatbots, gesture controllers, AI medical assistants. Real problems, real solutions.
