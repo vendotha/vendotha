@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download, Eye, ArrowDown } from "lucide-react";
 import { useProfile } from "@/hooks/usePortfolioData";
 import { API_BASE } from "@/lib/api";
 
-const roles = ["Backend Developer","Django & FastAPI Engineer","AI/ML Builder","Nest JS Developer","Open Source Contributor"];
+const roles = ["Backend Developer","AI/ML Builder","Open Source Contributor"];
 
 const HeroSection = ({ repoCount }: { repoCount: number }) => {
   const { profile } = useProfile();
@@ -29,7 +29,7 @@ const HeroSection = ({ repoCount }: { repoCount: number }) => {
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
       <motion.div initial={{opacity:0}} animate={{opacity:0.06}} transition={{delay:1.5,duration:1}}
         className="absolute top-32 right-10 lg:right-32 -rotate-6 font-mono text-xs leading-6 text-foreground select-none hidden lg:block">
-        <pre>{`from django.db import models\n\nclass Developer:\n    name = "Buvananand"\n    stack = ["Django","FastAPI",\n             "Python","AI/ML"]\n    status = "open_to_work"\n    coffee = float("inf")`}</pre>
+        <pre>{`from django.db import models\n\nclass Developer:\n    name = "Buvananand"\n    stack = ["Django","FastAPI","Springboot",\n             "Python","Java","AI/ML"]\n    status = "open_to_work"\n    coffee = float("inf")`}</pre>
       </motion.div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
