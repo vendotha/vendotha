@@ -126,6 +126,31 @@ LangChain ReAct agent that self-directs research via Wikipedia + web search tool
 
 ---
 
+## 📄 Research
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🧭 Narrative Relevance Score
+**Consequence-Weighted Retrieval for Interactive Narrative** · [→ Repo](https://github.com/vendotha/Narrative-Relevance-Score)
+
+Research paper introducing NRS, a retrieval scoring function that augments cosine similarity with consequence weighting and recency decay to keep story-critical events retrievable in RAG-based interactive fiction. Implemented in Kalapatha.
+
+</td>
+<td width="50%" valign="top">
+
+### 🕵️ Spectra-FakeNet
+**Dual-Stream Spatial-Frequency Deepfake Detection** · [→ Repo](https://github.com/vendotha/Spectra-FakeNet)
+
+Research paper proposing a dual-stream network that fuses RGB spatial features with DCT frequency-domain signals to catch GAN artifacts that spatial-only detectors miss. Implemented in DeepDetect V2.
+
+</td>
+</tr>
+</table>
+
+---
+
 ## 🛠️ Tech Stack
 
 <div align="center">
