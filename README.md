@@ -33,7 +33,7 @@ engineer = {
 }
 ```
 
-I design systems that think — from RAG pipelines and agentic AI workflows to production-grade backend services. My work lives at the edge of **scalability** and **intelligence**.
+I design systems that think from RAG pipelines and agentic AI workflows to production-grade backend services. My work lives at the edge of **scalability** and **intelligence**.
 
 ---
 
@@ -46,7 +46,7 @@ I design systems that think — from RAG pipelines and agentic AI workflows to p
 ### 🧭 Kalapatha API
 **Stateful RAG Narrative Engine** · [→ Repo](https://github.com/vendotha/kalapatha-api)
 
-FastAPI backend orchestrating five AI systems at once — LLM narrative generation, a custom 3-layer RAG memory engine (Narrative Relevance Score), local speech-to-text, voice-cloned TTS, and AI image generation.
+FastAPI backend orchestrating five AI systems at once LLM narrative generation, a custom 3-layer RAG memory engine (Narrative Relevance Score), local speech-to-text, voice-cloned TTS, and AI image generation.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -73,7 +73,7 @@ Full-stack Django platform with AI meal personalization, multi-role dashboards (
 ### 🎬 CineTicket
 **Movie Review & Reservation System** · [→ Repo](https://github.com/vendotha/cineticket)
 
-Enterprise-grade Spring Boot REST API combining movie reviews with theater seat reservations — JWT auth, RBAC, Stripe payments, PDF receipts, and email notifications.
+Enterprise-grade Spring Boot REST API combining movie reviews with theater seat reservations JWT auth, RBAC, Stripe payments, PDF receipts, and email notifications.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![SpringBoot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
@@ -86,7 +86,7 @@ Enterprise-grade Spring Boot REST API combining movie reviews with theater seat 
 ### 🕵️ DeepDetect V2
 **Deepfake Detection Engine** · [→ Repo](https://github.com/vendotha/DeepDetect-V2)
 
-Spatial–frequency deepfake detection combining RGB features with DCT frequency-domain signals through a dual-stream CNN, served via a Flask API.
+Spatial frequency deepfake detection combining RGB features with DCT frequency-domain signals through a dual-stream CNN, served via a Flask API.
 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask)
@@ -100,7 +100,7 @@ Spatial–frequency deepfake detection combining RGB features with DCT frequency
 ### 💳 CredFlow
 **Referral & Credit System** · [→ Repo](https://github.com/vendotha/Credflow)
 
-Full-stack referral and rewards platform — unique referral links, dual credit rewards on first purchase, fraud prevention, and a real-time metrics dashboard.
+Full-stack referral and rewards platform unique referral links, dual credit rewards on first purchase, fraud prevention, and a real-time metrics dashboard.
 
 ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
