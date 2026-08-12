@@ -15,7 +15,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=2800&pause=1200&color=A78BFA&center=true&vCenter=true&width=500&height=40&lines=Building+production-grade+AI+systems;Architecting+scalable+backends;Designing+intelligent+narratives;Shipping+things+that+matter" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=2800&pause=1200&color=A78BFA&center=true&vCenter=true&width=500&height=40&lines=Building+production-grade+AI+systems;Architecting+scalable+backends;Exploring+agentic+AI+workflows;Shipping+things+that+matter" alt="Typing SVG" />
 
 </div>
 
@@ -27,13 +27,13 @@
 engineer = {
     "name"    : "Buvananand Vendotha",
     "base"    : "Hyderabad, India 🇮🇳",
-    "focus"   : ["AI Systems", "Backend", "Narratives"],
-    "building": "Kalapatha — AI Storytelling Engine",
+    "focus"   : ["Backend Engineering", "Agentic AI", "AI Systems"],
+    "exploring": "Agentic AI & AI-driven workflows alongside backend engineering",
     "seeking" : "Full-time · Collabs · Open Source",
 }
 ```
 
-I design systems that think — from RAG pipelines and computer vision models to intelligent narrative engines. My work lives at the edge of **scalability** and **intelligence**.
+I design systems that think — from RAG pipelines and agentic AI workflows to production-grade backend services. My work lives at the edge of **scalability** and **intelligence**.
 
 ---
 
@@ -43,69 +43,15 @@ I design systems that think — from RAG pipelines and computer vision models to
 <tr>
 <td width="50%" valign="top">
 
-### 🧭 Kalapatha
-**AI-Powered Interactive Storytelling** · *Research*
+### 🧭 Kalapatha API
+**Stateful RAG Narrative Engine** · [→ Repo](https://github.com/vendotha/kalapatha-api)
 
-An intelligent narrative engine where player choices carry real weight. Powered by a custom **Narrative Relevance Score** — combining semantic similarity, consequence weighting & temporal decay — to branch stories that actually remember you.
-
-Maps decisions to **4 distinct ending archetypes** via a consequence accumulator.
+FastAPI backend orchestrating five AI systems at once — LLM narrative generation, a custom 3-layer RAG memory engine (Narrative Relevance Score), local speech-to-text, voice-cloned TTS, and AI image generation.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-A78BFA?style=flat-square)
-![Research](https://img.shields.io/badge/Research-0ea5e9?style=flat-square)
-
-</td>
-<td width="50%" valign="top">
-
-### 🤖 Medibot
-**AI Medical Assistant** · [→ Repo](https://github.com/vendotha/Medibot)
-
-Multi-modal diagnostic system: YOLO object detection + CNN image classification + Gemini conversational AI. Real-time medical image analysis through a unified Streamlit dashboard.
-
-![YOLO](https://img.shields.io/badge/YOLO-00C897?style=flat-square)
-![CNN](https://img.shields.io/badge/CNN-FF6F00?style=flat-square)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google)
-![Streamlit](https://img.shields.io/badge/Streamlit-0ea5e9?style=flat-square)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🕵️ DeepDetect V2
-**Deepfake Detection Engine** · [→ Repo](https://github.com/vendotha/DeepDetect-V2)
-
-MesoNet-based deep learning detection with Gemini-powered human-readable explanations. Supports image & video input with a clean Flask API surface.
-
-![MesoNet](https://img.shields.io/badge/MesoNet-7C3AED?style=flat-square)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google)
-
-</td>
-<td width="50%" valign="top">
-
-### ✍️ Agentic Content Generator
-**Autonomous Blog Writer** · [→ Repo](https://github.com/vendotha/agentic-content-generator)
-
-LangChain agent that self-directs research via Wikipedia + web search tools, then writes context-aware content with zero manual prompting. Fully autonomous end-to-end.
-
-![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google)
-![Agents](https://img.shields.io/badge/Agents-A78BFA?style=flat-square)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔐 FastAPI Scalable Architecture
-**Enterprise REST API Template** · [→ Repo](https://github.com/vendotha/fastapi-scalable-architecture)
-
-Production-ready from day one: JWT auth, RBAC, async PostgreSQL, Docker. The backend starter kit teams actually ship with.
-
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-A78BFA?style=flat-square)
+![Groq](https://img.shields.io/badge/Groq-0ea5e9?style=flat-square)
 
 </td>
 <td width="50%" valign="top">
@@ -118,6 +64,60 @@ Full-stack Django platform with AI meal personalization, multi-role dashboards (
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
 ![AI](https://img.shields.io/badge/AI--Personalization-0ea5e9?style=flat-square)
 ![Fullstack](https://img.shields.io/badge/Full--Stack-7C3AED?style=flat-square)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎬 CineTicket
+**Movie Review & Reservation System** · [→ Repo](https://github.com/vendotha/cineticket)
+
+Enterprise-grade Spring Boot REST API combining movie reviews with theater seat reservations — JWT auth, RBAC, Stripe payments, PDF receipts, and email notifications.
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![SpringBoot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### 🕵️ DeepDetect V2
+**Deepfake Detection Engine** · [→ Repo](https://github.com/vendotha/DeepDetect-V2)
+
+Spatial–frequency deepfake detection combining RGB features with DCT frequency-domain signals through a dual-stream CNN, served via a Flask API.
+
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask)
+![MTCNN](https://img.shields.io/badge/MTCNN-7C3AED?style=flat-square)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💳 CredFlow
+**Referral & Credit System** · [→ Repo](https://github.com/vendotha/Credflow)
+
+Full-stack referral and rewards platform — unique referral links, dual credit rewards on first purchase, fraud prevention, and a real-time metrics dashboard.
+
+![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
+</td>
+<td width="50%" valign="top">
+
+### ✍️ Agentic Content Generator
+**Autonomous Blog Writer** · [→ Repo](https://github.com/vendotha/agentic-content-generator)
+
+LangChain ReAct agent that self-directs research via Wikipedia + web search tools, then writes context-aware content with zero manual prompting. Fully autonomous end-to-end.
+
+![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=google)
+![Agents](https://img.shields.io/badge/Agents-A78BFA?style=flat-square)
 
 </td>
 </tr>
@@ -140,6 +140,8 @@ Full-stack Django platform with AI meal personalization, multi-role dashboards (
 
 **Backend & APIs**
 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![SpringBoot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -173,8 +175,6 @@ Full-stack Django platform with AI meal personalization, multi-role dashboards (
 
 <br/>
 
-<img width="55%" src="https://github-readme-streak-stats.herokuapp.com/?user=vendotha&theme=tokyonight&hide_border=true&ring=A78BFA&fire=0ea5e9&currStreakLabel=A78BFA&sideLabels=A78BFA" />
-
 </div>
 
 ---
@@ -183,9 +183,9 @@ Full-stack Django platform with AI meal personalization, multi-role dashboards (
 
 | | |
 |:---:|:---|
-| 🧭 | Building **Kalapatha** — AI narrative engine with consequence-aware storytelling |
+| 🤖 | Exploring **agentic AI** and AI-driven workflows alongside backend engineering |
+| 🧭 | Building **Kalapatha API** — a stateful RAG narrative engine with consequence-aware storytelling |
 | 🌱 | Exploring **MLOps**, Kubernetes, and distributed system design patterns |
-| 📄 | Writing research on **Narrative Relevance Scoring** for adaptive story systems |
 | 🤝 | Open to **full-time roles**, research collabs & open source contributions |
 
 ---
