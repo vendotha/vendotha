@@ -103,6 +103,7 @@ Spatial–frequency deepfake detection combining RGB features with DCT frequency
 Full-stack referral and rewards platform — unique referral links, dual credit rewards on first purchase, fraud prevention, and a real-time metrics dashboard.
 
 ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -175,6 +176,7 @@ LangChain ReAct agent that self-directs research via Wikipedia + web search tool
 
 <br/>
 
+
 </div>
 
 ---
@@ -184,7 +186,6 @@ LangChain ReAct agent that self-directs research via Wikipedia + web search tool
 | | |
 |:---:|:---|
 | 🤖 | Exploring **agentic AI** and AI-driven workflows alongside backend engineering |
-| 🧭 | Building **Kalapatha API** — a stateful RAG narrative engine with consequence-aware storytelling |
 | 🌱 | Exploring **MLOps**, Kubernetes, and distributed system design patterns |
 | 🤝 | Open to **full-time roles**, research collabs & open source contributions |
 
@@ -192,7 +193,7 @@ LangChain ReAct agent that self-directs research via Wikipedia + web search tool
 
 <div align="center">
 
-*"The best systems feel invisible — until they don't exist."*
+*"The best systems feel invisible until they don't exist."*
 
 <br/>
 
