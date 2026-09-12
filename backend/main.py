@@ -53,6 +53,6 @@ async def root():
     return {"status": "ok", "message": "Buvananand Portfolio API"}
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 async def health():
     return {"status": "healthy"}
