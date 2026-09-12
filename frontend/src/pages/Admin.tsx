@@ -2,16 +2,17 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { signInWithPopup, signOut, onAuthStateChanged, User, getIdToken } from "firebase/auth";
 import { auth, googleProvider, ADMIN_EMAIL, isMissingConfig } from "@/lib/firebase";
 import {
-  updateProfile, updateSkills, updateExperience,
+  updateProfile, updateSkills, updateExperience, updateSiteSettings,
   createPost, updatePost, deletePost,
-  fetchProfile, fetchSkills, fetchExperience, fetchPosts,
+  fetchProfile, fetchSkills, fetchExperience, fetchPosts, fetchSiteSettings,
   API_BASE,
 } from "@/lib/api";
-import { defaultProfile, type Profile, type SkillCategory, type Experience, type Post } from "@/hooks/usePortfolioData";
+import { defaultProfile, defaultSiteSettings, type Profile, type SkillCategory, type Experience, type Post, type SiteSettings } from "@/hooks/usePortfolioData";
 import { LogOut, Upload, Plus, Trash2, Save, X, ChevronDown, ChevronUp, Eye, Download, Crop, RefreshCw, AlertCircle } from "lucide-react";
 
 // ── Token helper ──────────────────────────────────────────────────────────────
 async function getToken(): Promise<string> {
+  if (!auth) throw new Error("Firebase is not configured.");
   const user = auth.currentUser;
   if (!user) throw new Error("Not logged in");
   return getIdToken(user);
@@ -41,6 +42,11 @@ const LoginScreen = () => {
   );
 
   const handleLogin = async () => {
+    if (!auth) {
+      setError("Firebase not configured. Add your VITE_FIREBASE_* values to the frontend .env file.");
+      return;
+    }
+
     try {
       setError("");
       const result = await signInWithPopup(auth, googleProvider);
@@ -357,16 +363,19 @@ const AdminDashboard = ({ user }: { user: User }) => {
   const [skills, setSkills] = useState<SkillCategory[]>([]);
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [posts, setPosts] = useState<Post[]>([]);
+  const [siteSettings, setSiteSettings] = useState<SiteSettings>(defaultSiteSettings);
 
   const [loadingSkills, setLoadingSkills] = useState(true);
   const [loadingExp, setLoadingExp] = useState(true);
   const [loadingPosts, setLoadingPosts] = useState(true);
   const [loadingProfile, setLoadingProfile] = useState(true);
+  const [loadingSettings, setLoadingSettings] = useState(true);
 
   const [errorSkills, setErrorSkills] = useState("");
   const [errorExp, setErrorExp] = useState("");
   const [errorPosts, setErrorPosts] = useState("");
   const [errorProfile, setErrorProfile] = useState("");
+  const [errorSettings, setErrorSettings] = useState("");
 
   const [dpFile, setDpFile] = useState<File | null>(null);
   const [dpCropSrc, setDpCropSrc] = useState<string | null>(null);
@@ -414,8 +423,16 @@ const AdminDashboard = ({ user }: { user: User }) => {
       .finally(() => setLoadingPosts(false));
   };
 
+  const loadSiteSettings = () => {
+    setLoadingSettings(true); setErrorSettings("");
+    fetchSiteSettings()
+      .then(data => setSiteSettings({ ...defaultSiteSettings, ...data }))
+      .catch(e => setErrorSettings(`Failed to load site settings: ${e.message}`))
+      .finally(() => setLoadingSettings(false));
+  };
+
   useEffect(() => {
-    loadProfile(); loadSkills(); loadExp(); loadPosts();
+    loadProfile(); loadSkills(); loadExp(); loadPosts(); loadSiteSettings();
   }, []);
 
   // ── DP crop flow ──────────────────────────────────────────────────────────
@@ -466,6 +483,13 @@ const AdminDashboard = ({ user }: { user: User }) => {
   const saveExperiences = async () => {
     setSaving("exp");
     try { await updateExperience(await getToken(), experiences); toast("exp"); }
+    catch (e: any) { alert("Save failed: " + e.message); }
+    setSaving(null);
+  };
+
+  const saveSiteSettingsData = async () => {
+    setSaving("settings");
+    try { await updateSiteSettings(await getToken(), siteSettings); toast("settings"); }
     catch (e: any) { alert("Save failed: " + e.message); }
     setSaving(null);
   };
@@ -730,6 +754,138 @@ const AdminDashboard = ({ user }: { user: User }) => {
           )}
         </Section>
 
+        {/* ── SITE SETTINGS ── */}
+        <Section title="⚙️ Site Settings">
+          {loadingSettings ? <Skeleton rows={3}/> : errorSettings ? (
+            <ErrorBanner message={errorSettings} onRetry={loadSiteSettings}/>
+          ) : (
+            <div className="space-y-4 pt-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="text-xs text-muted-foreground font-sans block mb-1">Theme</label>
+                  <select value={siteSettings.theme} onChange={e => setSiteSettings({ ...siteSettings, theme: e.target.value as "light" | "dark" })}
+                    className="w-full glass-input text-sm font-sans text-foreground">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-xs text-muted-foreground font-sans block mb-1">Language</label>
+                  <select value={siteSettings.language} onChange={e => setSiteSettings({ ...siteSettings, language: e.target.value as "en" | "hi" | "te" })}
+                    className="w-full glass-input text-sm font-sans text-foreground">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="te">Telugu</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button onClick={() => setSiteSettings({ ...siteSettings, translation_enabled: !siteSettings.translation_enabled })}
+                  className={`relative w-11 h-6 rounded-full transition-colors ${siteSettings.translation_enabled ? "bg-green-500" : "bg-muted"}`}>
+                  <span className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${siteSettings.translation_enabled ? "translate-x-5" : "translate-x-0.5"}`} />
+                </button>
+                <span className="text-sm font-sans">Enable translation toggle</span>
+              </div>
+
+              <Field label="About title" value={siteSettings.about_title} onChange={v => setSiteSettings({ ...siteSettings, about_title: v })} />
+              <Field label="About intro" value={siteSettings.about_intro} onChange={v => setSiteSettings({ ...siteSettings, about_intro: v })} textarea />
+              <Field label="About story" value={siteSettings.about_story} onChange={v => setSiteSettings({ ...siteSettings, about_story: v })} textarea />
+              <Field label="About quote" value={siteSettings.about_quote} onChange={v => setSiteSettings({ ...siteSettings, about_quote: v })} />
+
+              <div className="grid grid-cols-2 gap-4">
+                <Field label="Experience heading" value={siteSettings.experience_heading} onChange={v => setSiteSettings({ ...siteSettings, experience_heading: v })} />
+                <Field label="Education heading" value={siteSettings.education_heading} onChange={v => setSiteSettings({ ...siteSettings, education_heading: v })} />
+              </div>
+              <Field label="Experience subheading" value={siteSettings.experience_subheading} onChange={v => setSiteSettings({ ...siteSettings, experience_subheading: v })} />
+              <Field label="Achievements heading" value={siteSettings.achievements_heading} onChange={v => setSiteSettings({ ...siteSettings, achievements_heading: v })} />
+              <Field label="Contact heading" value={siteSettings.contact_heading} onChange={v => setSiteSettings({ ...siteSettings, contact_heading: v })} />
+              <Field label="Contact subheading" value={siteSettings.contact_subheading} onChange={v => setSiteSettings({ ...siteSettings, contact_subheading: v })} />
+
+              <div className="space-y-3">
+                <label className="text-xs text-muted-foreground font-sans block">Hero roles</label>
+                {siteSettings.hero_roles.map((role, idx) => (
+                  <div key={idx} className="flex gap-2">
+                    <input value={role} onChange={e => {
+                      const next = [...siteSettings.hero_roles]; next[idx] = e.target.value; setSiteSettings({ ...siteSettings, hero_roles: next });
+                    }} className="flex-1 glass-input text-sm font-sans text-foreground" />
+                    <button onClick={() => setSiteSettings({ ...siteSettings, hero_roles: siteSettings.hero_roles.filter((_, i) => i !== idx) })}
+                      className="p-2 text-muted-foreground hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4"/></button>
+                  </div>
+                ))}
+                <button onClick={() => setSiteSettings({ ...siteSettings, hero_roles: [...siteSettings.hero_roles, "New Role"] })}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-dashed border-primary/40 text-sm text-primary hover:bg-primary/5 transition-colors"><Plus className="w-4 h-4"/> Add role</button>
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-xs text-muted-foreground font-sans block">Navigation items</label>
+                {siteSettings.nav_items.map((item, idx) => (
+                  <div key={`${item.label}-${idx}`} className="grid grid-cols-2 gap-2">
+                    <input value={item.label} onChange={e => {
+                      const next = [...siteSettings.nav_items]; next[idx] = { ...next[idx], label: e.target.value }; setSiteSettings({ ...siteSettings, nav_items: next });
+                    }} className="glass-input text-sm font-sans text-foreground" />
+                    <div className="flex gap-2">
+                      <input value={item.href} onChange={e => {
+                        const next = [...siteSettings.nav_items]; next[idx] = { ...next[idx], href: e.target.value }; setSiteSettings({ ...siteSettings, nav_items: next });
+                      }} className="flex-1 glass-input text-sm font-sans text-foreground" />
+                      <button onClick={() => setSiteSettings({ ...siteSettings, nav_items: siteSettings.nav_items.filter((_, i) => i !== idx) })}
+                        className="p-2 text-muted-foreground hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4"/></button>
+                    </div>
+                  </div>
+                ))}
+                <button onClick={() => setSiteSettings({ ...siteSettings, nav_items: [...siteSettings.nav_items, { label: "New Item", href: "#" }] })}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-dashed border-primary/40 text-sm text-primary hover:bg-primary/5 transition-colors"><Plus className="w-4 h-4"/> Add nav item</button>
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-xs text-muted-foreground font-sans block">Education</label>
+                {siteSettings.education.map((edu, idx) => (
+                  <div key={`${edu.degree}-${idx}`} className="glass-card p-3 space-y-2">
+                    <Field label="Degree" value={edu.degree} onChange={v => {
+                      const next = [...siteSettings.education]; next[idx] = { ...next[idx], degree: v }; setSiteSettings({ ...siteSettings, education: next });
+                    }} />
+                    <Field label="Institution" value={edu.institution} onChange={v => {
+                      const next = [...siteSettings.education]; next[idx] = { ...next[idx], institution: v }; setSiteSettings({ ...siteSettings, education: next });
+                    }} />
+                    <div className="grid grid-cols-2 gap-3">
+                      <Field label="Period" value={edu.period} onChange={v => {
+                        const next = [...siteSettings.education]; next[idx] = { ...next[idx], period: v }; setSiteSettings({ ...siteSettings, education: next });
+                      }} />
+                      <Field label="GPA" value={edu.gpa} onChange={v => {
+                        const next = [...siteSettings.education]; next[idx] = { ...next[idx], gpa: v }; setSiteSettings({ ...siteSettings, education: next });
+                      }} />
+                    </div>
+                    <Field label="Location" value={edu.location} onChange={v => {
+                      const next = [...siteSettings.education]; next[idx] = { ...next[idx], location: v }; setSiteSettings({ ...siteSettings, education: next });
+                    }} />
+                    <button onClick={() => setSiteSettings({ ...siteSettings, education: siteSettings.education.filter((_, i) => i !== idx) })}
+                      className="text-xs text-red-500 hover:underline">Remove education</button>
+                  </div>
+                ))}
+                <button onClick={() => setSiteSettings({ ...siteSettings, education: [...siteSettings.education, { degree: "", institution: "", period: "", gpa: "", location: "" }] })}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-dashed border-primary/40 text-sm text-primary hover:bg-primary/5 transition-colors"><Plus className="w-4 h-4"/> Add education</button>
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-xs text-muted-foreground font-sans block">Achievements</label>
+                {siteSettings.achievements.map((item, idx) => (
+                  <div key={`${item}-${idx}`} className="flex gap-2">
+                    <input value={item} onChange={e => {
+                      const next = [...siteSettings.achievements]; next[idx] = e.target.value; setSiteSettings({ ...siteSettings, achievements: next });
+                    }} className="flex-1 glass-input text-sm font-sans text-foreground" />
+                    <button onClick={() => setSiteSettings({ ...siteSettings, achievements: siteSettings.achievements.filter((_, i) => i !== idx) })}
+                      className="p-2 text-muted-foreground hover:text-red-500 transition-colors"><Trash2 className="w-4 h-4"/></button>
+                  </div>
+                ))}
+                <button onClick={() => setSiteSettings({ ...siteSettings, achievements: [...siteSettings.achievements, "New achievement"] })}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-dashed border-primary/40 text-sm text-primary hover:bg-primary/5 transition-colors"><Plus className="w-4 h-4"/> Add achievement</button>
+              </div>
+
+              <SaveBtn onClick={saveSiteSettingsData} saving={saving === "settings"} saved={saved === "settings"} label="Save site settings"/>
+            </div>
+          )}
+        </Section>
+
         {/* ── POSTS ── */}
         <Section title="📝 LinkedIn Posts">
           {loadingPosts ? <Skeleton rows={2}/> : errorPosts ? (
@@ -795,6 +951,12 @@ const AdminPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!auth) {
+      setUser(null);
+      setLoading(false);
+      return;
+    }
+
     const unsub = onAuthStateChanged(auth, u => {
       setUser(u?.email === ADMIN_EMAIL ? u : null);
       setLoading(false);
