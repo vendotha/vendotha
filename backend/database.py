@@ -11,6 +11,12 @@ load_dotenv(dotenv_path=env_path, override=True)
 _pool: asyncpg.Pool = None
 
 
+def to_jsonb_value(value):
+    if value is None:
+        return "[]"
+    return __import__("json").dumps(value)
+
+
 async def get_pool() -> asyncpg.Pool:
     global _pool
     if _pool is None:
@@ -87,6 +93,28 @@ async def init_db():
                 link_title  TEXT,
                 created_at  TIMESTAMPTZ DEFAULT NOW()
             );
+
+            CREATE TABLE IF NOT EXISTS site_settings (
+                id                    SERIAL PRIMARY KEY,
+                theme                 TEXT NOT NULL DEFAULT 'dark',
+                language              TEXT NOT NULL DEFAULT 'en',
+                translation_enabled   BOOLEAN NOT NULL DEFAULT TRUE,
+                about_title           TEXT NOT NULL DEFAULT 'About Me',
+                about_intro           TEXT NOT NULL DEFAULT '',
+                about_story          TEXT NOT NULL DEFAULT '',
+                about_quote           TEXT NOT NULL DEFAULT 'Build things that matter. Ship fast. Learn faster.',
+                experience_heading    TEXT NOT NULL DEFAULT 'Experience',
+                experience_subheading TEXT NOT NULL DEFAULT 'Work, research, and academic background',
+                education_heading     TEXT NOT NULL DEFAULT 'Education',
+                achievements_heading  TEXT NOT NULL DEFAULT 'Achievements',
+                contact_heading       TEXT NOT NULL DEFAULT 'Get in Touch',
+                contact_subheading    TEXT NOT NULL DEFAULT 'Open to new opportunities, collaborations, and interesting conversations.',
+                education             JSONB NOT NULL DEFAULT '[]'::jsonb,
+                achievements          JSONB NOT NULL DEFAULT '[]'::jsonb,
+                hero_roles            JSONB NOT NULL DEFAULT '[]'::jsonb,
+                nav_items             JSONB NOT NULL DEFAULT '[]'::jsonb,
+                updated_at            TIMESTAMPTZ DEFAULT NOW()
+            );
         """)
 
         # Seed profile if empty
@@ -104,7 +132,7 @@ async def init_db():
                 "+91 9440401919",
                 "https://github.com/vendotha",
                 "https://www.linkedin.com/in/vendotha",
-                "8.33",
+                "8.39",
                 True,
             )
 
@@ -157,5 +185,54 @@ async def init_db():
                     INSERT INTO posts (id, text, date, likes, comments, link, link_title)
                     VALUES ($1,$2,$3,$4,$5,$6,$7)
                 """, p[0], p[1], p[2], p[3], p[4], p[5], p[6])
+
+        # Seed site settings if empty
+        if await conn.fetchval("SELECT COUNT(*) FROM site_settings") == 0:
+            await conn.execute("""
+                INSERT INTO site_settings (
+                    theme, language, translation_enabled,
+                    about_title, about_intro, about_story, about_quote,
+                    experience_heading, experience_subheading,
+                    education_heading, achievements_heading,
+                    contact_heading, contact_subheading,
+                    education, achievements, hero_roles, nav_items
+                ) VALUES (
+                    $1, $2, $3,
+                    $4, $5, $6, $7,
+                    $8, $9,
+                    $10, $11,
+                    $12, $13,
+                    $14, $15, $16, $17
+                )
+            """,
+                "dark",
+                "en",
+                True,
+                "About Me",
+                "I'm a backend-focused developer from Hyderabad who loves building intelligent systems. My work sits at the intersection of Backend engineering and AI/ML.",
+                "Currently pursuing B.E. CSE at MVSR Engineering College (GPA: 8.33). I build things that matter — chatbots, gesture controllers, AI medical assistants.",
+                "Build things that matter. Ship fast. Learn faster.",
+                "Experience",
+                "Work, research, and academic background",
+                "Education",
+                "Achievements",
+                "Get in Touch",
+                "Open to new opportunities, collaborations, and interesting conversations.",
+                to_jsonb_value([
+                    {"degree": "Bachelor of Engineering in Computer Science", "institution": "MVSR Engineering College", "period": "2023 — 2026", "gpa": "8.33 / 10", "location": "Hyderabad, Telangana"},
+                    {"degree": "Diploma in Computer Engineering", "institution": "TRR College of Technology", "period": "2020 — 2023", "gpa": "8.54 / 10", "location": "Hyderabad, Telangana"}
+                ]),
+                to_jsonb_value([
+                    "Dyne Research ideaLab 2025 — Selected among 10,000+ applicants",
+                    "Inter-College Hackathon 2024 — Finalist",
+                    "National AI/ML Challenge 2023 — Top 10%",
+                    "Open-Source Contributor Recognition 2024",
+                    "CODE-CRACK 2025 — Certificate of Participation (IEEE MVSR CS)",
+                    "Tech Savishkaar 3.0 — Cleared Coding Round (National Hackathon)",
+                    "Cisco Python Certification 2024"
+                ]),
+                to_jsonb_value(["Backend Developer", "AI/ML Builder", "Open Source Contributor"]),
+                to_jsonb_value([{"label": "About", "href": "#about"}, {"label": "Skills", "href": "#skills"}, {"label": "Experience", "href": "#experience"}, {"label": "Projects", "href": "#projects"}, {"label": "Posts", "href": "#posts"}, {"label": "Contact", "href": "#contact"}])
+            )
 
     print("✅ Database initialised and seeded successfully")

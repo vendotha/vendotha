@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, Phone, MapPin, ArrowRight, Send } from "lucide-react";
-import { useProfile } from "@/hooks/usePortfolioData";
+import { useProfile, useSiteSettings } from "@/hooks/usePortfolioData";
 
 const ContactSection = () => {
   const { profile } = useProfile();
+  const { settings } = useSiteSettings();
   const [form, setForm] = useState({ name:"", email:"", subject:"", message:"" });
   const [sent, setSent] = useState(false);
 
@@ -29,11 +30,11 @@ const ContactSection = () => {
       <div className="max-w-5xl mx-auto">
         <motion.h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-4"
           initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
-          Get in Touch
+          {settings.contact_heading || "Get in Touch"}
         </motion.h2>
         <motion.p className="text-center text-muted-foreground mb-16 font-sans"
           initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}}>
-          Open to new opportunities, collaborations, and interesting conversations.
+          {settings.contact_subheading || "Open to new opportunities, collaborations, and interesting conversations."}
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-10">

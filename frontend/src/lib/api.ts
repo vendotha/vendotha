@@ -32,6 +32,11 @@ export async function fetchPosts() {
   return res.json();
 }
 
+export async function fetchSiteSettings() {
+  const res = await apiFetch("/api/site-settings");
+  return res.json();
+}
+
 // ── Admin writes (require Firebase ID token) ──────────────────────────────
 
 function authHeaders(token: string) {
@@ -61,6 +66,15 @@ export async function updateExperience(token: string, items: any[]) {
     method: "PUT",
     headers: { ...authHeaders(token), "Content-Type": "application/json" },
     body: JSON.stringify(items),
+  });
+  return res.json();
+}
+
+export async function updateSiteSettings(token: string, settings: any) {
+  const res = await apiFetch("/api/site-settings", {
+    method: "PUT",
+    headers: { ...authHeaders(token), "Content-Type": "application/json" },
+    body: JSON.stringify(settings),
   });
   return res.json();
 }

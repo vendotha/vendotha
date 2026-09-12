@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download, Eye, ArrowDown } from "lucide-react";
-import { useProfile } from "@/hooks/usePortfolioData";
+import { useProfile, useSiteSettings } from "@/hooks/usePortfolioData";
 import { API_BASE } from "@/lib/api";
-
-const roles = ["Backend Developer","AI/ML Builder","Open Source Contributor"];
 
 const HeroSection = ({ repoCount }: { repoCount: number }) => {
   const { profile } = useProfile();
+  const { settings } = useSiteSettings();
   const [showResume, setShowResume] = useState(false);
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [deleting, setDeleting] = useState(false);
 
+  const roles = settings.hero_roles && settings.hero_roles.length ? settings.hero_roles : ["Backend Developer", "AI/ML Builder", "Open Source Contributor"];
+
   useEffect(() => {
     const cur = roles[roleIndex];
     let t: ReturnType<typeof setTimeout>;
-    if (!deleting && displayed.length < cur.length) t = setTimeout(() => setDisplayed(cur.slice(0,displayed.length+1)),80);
-    else if (!deleting && displayed.length === cur.length) t = setTimeout(() => setDeleting(true),2000);
-    else if (deleting && displayed.length > 0) t = setTimeout(() => setDisplayed(displayed.slice(0,-1)),40);
-    else { setDeleting(false); setRoleIndex(p => (p+1)%roles.length); }
+    if (!deleting && displayed.length < cur.length) t = setTimeout(() => setDisplayed(cur.slice(0, displayed.length + 1)), 80);
+    else if (!deleting && displayed.length === cur.length) t = setTimeout(() => setDeleting(true), 2000);
+    else if (deleting && displayed.length > 0) t = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 40);
+    else { setDeleting(false); setRoleIndex((p) => (p + 1) % roles.length); }
     return () => clearTimeout(t);
-  }, [displayed, deleting, roleIndex]);
+  }, [displayed, deleting, roleIndex, roles]);
 
   const dpSrc = profile.dp_url?.startsWith("data:") ? profile.dp_url : (profile.dp_url || "/dp.jpg");
 
